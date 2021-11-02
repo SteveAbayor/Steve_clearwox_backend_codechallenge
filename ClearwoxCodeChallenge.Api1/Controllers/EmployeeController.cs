@@ -18,7 +18,7 @@ namespace ClearwoxCodeChallenge.Api1.Controllers
 
         public EmployeeController(IEmployeeRepository employeesRepository)
         {
-            _employeesRepository = employeesRepository
+            _employeesRepository = employeesRepository;
         }
         private IEmployeeRepository employees = new EmployeeRepository();
 
@@ -29,7 +29,7 @@ namespace ClearwoxCodeChallenge.Api1.Controllers
         }
 
         [Route("api/employee/department/{departmentId}")]
-        [HttpGet("{id}")]
+        [HttpGet]
         public ActionResult<List<Employee>> GetEmployee(int departmentId)
         {
             var employee = _employeesRepository.GetEmployeeByDepartment(departmentId);
@@ -38,7 +38,7 @@ namespace ClearwoxCodeChallenge.Api1.Controllers
             {
                 return NotFound();
             }
-            return Ok(employee)
+            return Ok(employee);
         }
 
     }

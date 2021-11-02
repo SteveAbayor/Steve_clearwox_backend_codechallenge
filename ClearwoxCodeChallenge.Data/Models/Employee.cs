@@ -18,6 +18,7 @@ namespace ClearwoxCodeChallenge.Data.Models
         public string AddressOfResidence { get; set; }
         public int DepartmentId { get; set; }
 
+
         [ForeignKey("DepartmentId")]
         public ICollection<Department> Departments { get; set; }
     }
