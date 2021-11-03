@@ -33,7 +33,7 @@ namespace ClearwoxCodeChallenge.Api1
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ClearwoxCodeChallenge.Api1", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ClearwoxCodeChallenge.Api", Version = "v1" });
             });
 
         }
